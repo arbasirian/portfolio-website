@@ -7,6 +7,21 @@ const HeaderSection = () => (
             <Link href="/"><a>Armin Basirian</a></Link>
         </div>
         <MainMenu />
+        <style jsx>{`
+            .header-section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 0;
+            }
+            .logo-wrapper a {
+                font-family: 'Dancing Script', cursive;
+                font-weight: 900;
+                font-size: 31px;
+                text-decoration: none;
+                color: #c82127 
+            }
+        `}</style>
     </div>
 );
 
