@@ -4,7 +4,7 @@ const Index = () => (
     <Layout pageTitle="Home">
         <div className="home-page">
             <div className="image-container slideInLeft">
-                <img src="https://img.techpowerup.org/200629/webp-net-resizeimage.jpg" />
+                <img src="/static/armin.jpg" />
             </div>
             <div className="desc-container slideInRight">
                 <div className="full-name slideInRight">Armin Basirian</div>
@@ -44,15 +44,16 @@ const Index = () => (
                 line-height: initial;
                 margin-left: -50px;
             }
-            .job-title {
+            .desc-container .job-title {
                 font-size: 29px;
                 line-height: normal;
                 padding: 10px 20px;
             }
-            .age {
+            .desc-container .age {
                 font-size: 19px;
                 padding: 0 20px;
-                font-weight: 100
+                font-weight: 100;
+                line-height: normal;
             }
         `}</style>
     </Layout>

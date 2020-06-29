@@ -1,0 +1,44 @@
+@import './product-sans.css';
+@import './animation.css';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'ProductSans', sans-serif !important;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+.ui.dropdown { padding: 20px 10px }
+.ui.dropdown > .text {
+
+  color: #000;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+/* Button Design */
+
+.action-button {
+  border-radius: 3px;
+  background: #c82127;
+  background: linear-gradient(247deg,#c82127 33%,#ff656b 100%);
+  border: none;
+  color: #fff;
+  display: -webkit-box;
+  display: flex;
+  height: 37.26px;
+  justify-content: space-around;
+  cursor: pointer;
+  -webkit-box-align: center;
+  align-items: center;
+  font-weight: 500;
+  font-family: 'ProductSans', sans-serif !important;
+}
+.action-button:focus {
+  outline: none;
+}

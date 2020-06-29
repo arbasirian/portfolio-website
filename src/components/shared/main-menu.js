@@ -5,7 +5,7 @@ const MainMenu = () => (
     <div className="main-menu">
         <Dropdown text='Portfolio'>
             <Dropdown.Menu>
-                <Dropdown.Item text='New'><Link href="/portfolio"><a>All Items</a></Link></Dropdown.Item >
+                <Dropdown.Item><Link href="/portfolio"><a>All Items</a></Link></Dropdown.Item >
             </Dropdown.Menu>
         </Dropdown>
         <Link href="/articles"><a>Articles</a></Link>

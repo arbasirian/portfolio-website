@@ -1,12 +1,13 @@
 import HeaderSection from '../shared/header-section';
 import styles from "./layout.module.css";
 import { Container, Header } from 'semantic-ui-react'
+import Head from 'next/head';
 
 const Layout = ({ children, pageTitle }) => ( 
     <div className={styles.layout}>
-        <head>
+        <Head>
             <title>{ pageTitle === 'Home' ? '' : pageTitle + ' | ' }Armin Basirian</title>
-        </head>
+        </Head>
         <header>
             <Container>
                 <HeaderSection />

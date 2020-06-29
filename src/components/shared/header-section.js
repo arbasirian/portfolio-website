@@ -18,7 +18,9 @@ const HeaderSection = () => (
                 font-weight: 900;
                 font-size: 31px;
                 text-decoration: none;
-                color: #c82127 
+                color: #c82127;
+                line-height: normal;
+
             }
         `}</style>
     </div>
