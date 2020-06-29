@@ -12,7 +12,6 @@ const HeaderSection = () => (
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 20px 0;
             }
             .logo-wrapper a {
                 font-family: 'Dancing Script', cursive;
