@@ -6,13 +6,13 @@ const PortfolioItem = ({activeSlide, list}) => {
     const { title,  description, image_url} = list[activeSlide];
     return (
         <div className="portfolio-item">
-            <div className="info  slideInLeft">
+            <div className="info">
                 <div className="title">{title}</div>
                 <div className="devider" />
                 <div className="description">{description}</div>
                 <a className="more">See More</a>
             </div>
-            <div className="slideInRight image">
+            <div className="image">
                 <img src={image_url}/>
             </div>
             <style jsx>{`

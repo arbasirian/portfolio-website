@@ -27,7 +27,7 @@ const Books = ({ booksList }) => {
                 } 
                 .book-container .item { 
                     width: 40%;
-                    max-width: 300px;
+                    max-width: 350px;
                 }
             `}</style>
         </Layout>
