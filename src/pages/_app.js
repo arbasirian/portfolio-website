@@ -5,7 +5,7 @@ import { createWrapper } from 'next-redux-wrapper';
 import store from '../redux/store';
 import '../assets/styles/global.css';
 import 'semantic-ui-css/semantic.min.css';
-
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 class MyApp extends App {
     render() {
