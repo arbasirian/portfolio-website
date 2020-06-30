@@ -1,17 +1,21 @@
 import Layout from '../components/layout/layout';
 import BookItem from '../components/book-item/book-item';
+import { createStructuredSelector } from 'reselect';
+import { selectBookList } from '../redux/book/book.selectors';
+import { connect } from 'react-redux';
 
-const Books = () => {
-    const bookInfo = { bookId: 1, bookImage: '/static/1.jpg', bookTitle: 'test', description: 'test2' };
+const Books = ({ booksList }) => {
+    
     return(
         <Layout pageTitle="Books">
             <div className="book-container">
-                <div className="item">
-                    <BookItem  details={ bookInfo } />
-                </div>
-                <div className="item">
-                    <BookItem  details={ bookInfo } />
-                </div>
+                {
+                    booksList.map((bookInfo) => (
+                        <div className="item" key={ bookInfo.id }>
+                            <BookItem key={ bookInfo.id }  details={ bookInfo } />
+                        </div>
+                    ))
+                }
             </div>
             <style jsx>{`
                 .book-container {
@@ -29,5 +33,7 @@ const Books = () => {
         </Layout>
     )
 };
-
-export default Books;
+const mapStateToProps = createStructuredSelector({
+    booksList: selectBookList
+});
+export default connect(mapStateToProps)(Books);

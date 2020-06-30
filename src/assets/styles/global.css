@@ -39,6 +39,11 @@ body {
   font-weight: 500;
   font-family: 'ProductSans', sans-serif !important;
 }
+.action-button:hover {
+  color: #fff;
+  background: linear-gradient(247deg,#c82127 10%,#ff656b 100%);
+
+}
 .action-button:focus {
   outline: none;
 }
