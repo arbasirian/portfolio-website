@@ -21,16 +21,16 @@ const ArticleItem = ({activeSlide, articles, selectArticle}) => {
             <style jsx>{`
                 .article-item {
                     display: flex;
-                    justify-content: space-between;
                     align-items: center;
                     min-height: 80vh;
+                    flex-wrap: wrap;
                 }
                 .article-item .info {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    width: 50%;
                     padding: 0 20px;
+                    flex: 1;
                 }
                 .article-item .info .title {
                     font-size: 20px;
@@ -64,15 +64,14 @@ const ArticleItem = ({activeSlide, articles, selectArticle}) => {
                     color: #fff;
                 }
                 .article-item .image {
-                    width: 50%;
                     display: flex;
                     align-items: center;
                     flex-direction: column;
-                    padding-left: 20px;
-                    
+                    padding: 0 20px;
+                    flex: 1;
+                    min-width: 250px;
                 }
                 .article-item .image img {
-                    width: 500px;
                     border-top-right-radius: 20px;
                     border-bottom-left-radius: 20px;
                 }

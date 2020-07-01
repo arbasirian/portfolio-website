@@ -34,7 +34,7 @@ const Index = () => (
                 flex-direction: column;
             }
             .desc-container .full-name {
-                font-size: 50px;
+                font-size: 48px;
                 font-weight: 900;
                 display: inline;
                 padding: 10px 22px;
@@ -55,6 +55,11 @@ const Index = () => (
                 padding: 0 20px;
                 font-weight: 100;
                 line-height: normal;
+            }
+            @media only screen and (max-width: 600px) {
+                .desc-container .full-name {
+                    margin-left: 0;
+                }
             }
         `}</style>
     </Layout>

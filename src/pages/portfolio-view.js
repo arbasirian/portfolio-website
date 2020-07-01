@@ -28,7 +28,6 @@ const PortfolioView = ({ portfolio, selectPortfolio }) => {
             </div>
             <style jsx>{`
                 .portfolio-view {
-                    width: 80%;
                     margin: 30px auto;
                 }
                 .header-wrapper {
@@ -38,6 +37,7 @@ const PortfolioView = ({ portfolio, selectPortfolio }) => {
                     border-radius: 7px;
                     justify-content: space-evenly;
                     padding: 40px;
+                    flex-wrap: wrap;
                 }
                 .header-wrapper .image-container {
                     width: 150px;
@@ -52,10 +52,11 @@ const PortfolioView = ({ portfolio, selectPortfolio }) => {
                     object-fit: cover;
                 }
                 .header-wrapper .title {
-                    font-size: 50px;
+                    font-size: 45px;
                     line-height: initial;
                     font-weight: 900;
                     color: #fff;
+                    padding: 30px 0;
                 }
                 .text-wrapper {
                     padding: 30px;

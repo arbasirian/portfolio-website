@@ -6,8 +6,10 @@ import { createStructuredSelector } from 'reselect';
 import { selectArticle } from '../redux/article/article.actions';
 import { useRouter } from 'next/router';
 import { Icon } from 'semantic-ui-react';
+import { mobileParser } from 'react-responsive-redux';
 
 const ArticleView = ({ article, selectArticle }) => {
+    const { desktop } = mobileParser();
     const router = useRouter();
     const { articleId } = router.query;
     const { id, title, image_url, author, summary, text } = article;
@@ -33,16 +35,16 @@ const ArticleView = ({ article, selectArticle }) => {
             </div>
             <style jsx>{`
                 .article-view {
-                    width: 80%;
                     margin: 30px auto;
                 }
                 .image-wrapper, .image-wrapper img { width: 100% }
+                
                 .text-wrapper {
                     background-color: #fff;
-                    margin: -50px 30px 20px;
                     position: relative;
-                    border: 1px solid #f1f1f1;
-                    padding: 30px;
+                    border: ${ desktop ? '1px solid #f1f1f1' : 'none'};
+                    padding: ${ desktop ? '30px' : '30px 10px'};
+                    margin: ${ desktop ? '-50px 30px 20px' : '0'};
                 }
                 .title {
                     font-size: 22px;

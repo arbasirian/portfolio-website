@@ -50,6 +50,7 @@ const BookDetails = ({ bookDetails, selectBook }) => {
                 .detail-wrapper { 
                     padding: 0 20px; 
                     flex: 3;
+                    margin-bottom: 2em;
                 }
                 .detail-wrapper .title {
                     font-size: 30px;

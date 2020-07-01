@@ -22,16 +22,17 @@ const PortfolioItem = ({activeSlide, list, selectPortfolio}) => {
             <style jsx>{`
                 .portfolio-item {
                     display: flex;
-                    justify-content: space-between;
                     align-items: center;
-                    min-height: 90vh;
+                    min-height: 80vh;
+                    flex-wrap: wrap;
                 }
                 .portfolio-item .info {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-end;
-                    width: 60%;
                     padding: 0 20px;
+                    flex: 1;
+                    min-width: 250px;
                 }
                 .portfolio-item .info .title {
                     font-size: 30px;
@@ -53,7 +54,6 @@ const PortfolioItem = ({activeSlide, list, selectPortfolio}) => {
                     line-height: initial;
                     font-weight: 300;
                     color: #000000a1;
-                    padding-left: 40px;
                 }
                 .portfolio-item .info .more { 
                     font-family: inherit;
@@ -71,13 +71,15 @@ const PortfolioItem = ({activeSlide, list, selectPortfolio}) => {
                     color: #fff;
                 }
                 .portfolio-item .image {
-                    width: 40%;
                     display: flex;
                     align-items: center;
                     flex-direction: column;
+                    min-width: 200px;
+                    flex: 1;
+                    max-width: 250px;
                 }
                 .portfolio-item .image img {
-                    width: 250px;
+                    width: 100%
                 }
             `}</style>
         </div>
