@@ -3,3 +3,6 @@
     flex-direction: column;
     height: 100vh;
 }
+.stickyHeader {
+    background-color: #ffffff !important;
+ }

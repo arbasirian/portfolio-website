@@ -9,7 +9,19 @@ body {
   line-height: 1.6;
   font-size: 18px;
 }
+body::-webkit-scrollbar {
+  width: 5px;
+}
 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #e5e5e5;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #7c7fa3;
+  border-radius: 10px;
+}
 * {
   box-sizing: border-box;
 }
@@ -71,3 +83,4 @@ body {
 }
 .carousel .control-dots .dot:focus { outline: none; }
 
+.sticky-header >  .ui.sticky.fixed.top { background-color: #fff; }

@@ -1,9 +1,11 @@
 import { connect } from "react-redux";
 import { createStructuredSelector } from 'reselect';
 import { selectArticleSlide, selectArticles } from "../../redux/article/article.selectors";
+import Link from "next/link";
+import { selectArticle } from "../../redux/article/article.actions";
 
-const ArticleItem = ({activeSlide, articles}) => {
-    const { title,  summary, image_url} = articles[activeSlide];
+const ArticleItem = ({activeSlide, articles, selectArticle}) => {
+    const { id, title,  summary, image_url} = articles[activeSlide];
     return (
         <div className="article-item">
             <div className="image">
@@ -12,7 +14,9 @@ const ArticleItem = ({activeSlide, articles}) => {
             <div className="info">
                 <div className="title">{title}</div>
                 <div className="description">{summary}</div>
-                <a className="more">See More</a>
+                <Link href={{ pathname: '/article-view', query: { articleId: id } }}>
+                    <button onClick={ () => selectArticle(id) } className="more">See More</button>
+                </Link>
             </div>
             <style jsx>{`
                 .article-item {
@@ -76,8 +80,11 @@ const ArticleItem = ({activeSlide, articles}) => {
         </div>
     )
 }
+const mapDispatchToProps = dispatch => ({
+    selectArticle: item => dispatch(selectArticle(item)),
+});
 const mapStateToProps = createStructuredSelector({
     activeSlide: selectArticleSlide,
     articles: selectArticles
 });
-export default connect(mapStateToProps)(ArticleItem);
+export default connect(mapStateToProps, mapDispatchToProps)(ArticleItem);

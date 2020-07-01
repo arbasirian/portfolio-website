@@ -1,6 +1,6 @@
 import HeaderSection from '../shared/header-section';
 import styles from "./layout.module.css";
-import { Container, Header } from 'semantic-ui-react'
+import { Container, Header, Sticky } from 'semantic-ui-react'
 import Head from 'next/head';
 
 const Layout = ({ children, pageTitle }) => ( 
@@ -9,9 +9,12 @@ const Layout = ({ children, pageTitle }) => (
             <title>{ pageTitle === 'Home' ? '' : pageTitle + ' | ' }Armin Basirian</title>
         </Head>
         <header>
-            <Container>
-                <HeaderSection />
-            </Container>
+            <Sticky className="sticky-header">
+                <Container>
+                    <HeaderSection />
+                </Container>
+            </Sticky>
+            
         </header>
         <Container>
             <div className="bodyDesign">
