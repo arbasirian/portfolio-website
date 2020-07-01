@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { toggleSidebar } from '../../redux/mobile/mobile.actions';
 import { sidebarStatus } from '../../redux/mobile/mobile.selectors';
+import MobileMenu from '../shared/mobile-menu';
 
 const Layout = ({ children, pageTitle, visible, toggleSidebar }) => {
     return ( 
@@ -24,18 +25,7 @@ const Layout = ({ children, pageTitle, visible, toggleSidebar }) => {
                     visible={visible}
                     width='thin'
                 >
-                    <Menu.Item as='a'>
-                    <Icon name='home' />
-                    Home
-                    </Menu.Item>
-                    <Menu.Item as='a'>
-                    <Icon name='gamepad' />
-                    Games
-                    </Menu.Item>
-                    <Menu.Item as='a'>
-                    <Icon name='camera' />
-                    Channels
-                    </Menu.Item>
+                    <MobileMenu />
                 </Sidebar>
                 <Sidebar.Pusher dimmed={visible}>
                     <header>

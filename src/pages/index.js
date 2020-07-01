@@ -1,5 +1,5 @@
 import Layout from '../components/layout/layout';
-
+import { mobileParser } from 'react-responsive-redux'
 const Index = () => (
     <Layout pageTitle="Home">
         <div className="home-page">
@@ -18,6 +18,7 @@ const Index = () => (
                 align-items: center;
                 min-height: 86vh;
                 justify-content: center;
+                flex-wrap: wrap;
             }
             .image-container {
                 width: 400px;

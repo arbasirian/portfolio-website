@@ -84,3 +84,26 @@ body::-webkit-scrollbar-thumb {
 .carousel .control-dots .dot:focus { outline: none; }
 
 .sticky-header >  .ui.sticky.fixed.top { background-color: #fff; }
+
+.mobile-menu .content.active.accordion-menu {
+  display: flex !important;
+  flex-direction: column;
+}
+.ui.accordion .title:not(.ui) {
+  display: flex !important;
+  color: #fff !important;
+  flex-direction: row-reverse !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 10px 20px !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+}
+.ui.menu {
+  font-family: 'ProductSans', sans-serif !important;
+
+}
+.ui.accordion:not(.styled) .title~.content:not(.ui):last-child {
+  padding-bottom: 0;
+  padding-left: 10px;
+}
