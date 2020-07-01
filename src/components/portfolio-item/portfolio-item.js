@@ -24,7 +24,7 @@ const PortfolioItem = ({activeSlide, list, selectPortfolio}) => {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    height: 93vh;
+                    min-height: 90vh;
                 }
                 .portfolio-item .info {
                     display: flex;

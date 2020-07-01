@@ -16,7 +16,7 @@ const Index = () => (
             .home-page {
                 display: flex;
                 align-items: center;
-                height: 93vh;
+                min-height: 86vh;
                 justify-content: center;
             }
             .image-container {

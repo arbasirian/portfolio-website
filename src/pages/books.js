@@ -23,11 +23,11 @@ const Books = ({ booksList }) => {
                     justify-content: space-around;
                     flex-wrap: wrap;
                     align-items: center;
-                    height: 93vh;
+                    min-height: 90vh;
                 } 
                 .book-container .item { 
-                    width: 40%;
-                    max-width: 350px;
+                    width: 350px;
+                    margin: 2em 0;
                 }
             `}</style>
         </Layout>

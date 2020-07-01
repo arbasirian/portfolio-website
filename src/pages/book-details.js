@@ -33,9 +33,12 @@ const BookDetails = ({ bookDetails, selectBook }) => {
                     display: flex;
                     justify-content: space-between;
                     margin-top: 50px;
+                    flex-wrap:wrap;
                 }    
                 .book-details .left-container { 
-                    min-width: 300px;
+                    flex: 1;
+                    min-width: 250px;
+                    margin-bottom: 2em;
                  }  
                 .book-details .left-container img { width: 100% }   
                 .book-details .left-container .price{
@@ -44,7 +47,10 @@ const BookDetails = ({ bookDetails, selectBook }) => {
                     font-weight: 900;
                     margin: 1em auto;
                 } 
-                .detail-wrapper { padding-left: 30px }
+                .detail-wrapper { 
+                    padding: 0 20px; 
+                    flex: 3;
+                }
                 .detail-wrapper .title {
                     font-size: 30px;
                     font-weight: 700;

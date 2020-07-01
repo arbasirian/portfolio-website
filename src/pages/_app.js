@@ -6,10 +6,18 @@ import store from '../redux/store';
 import '../assets/styles/global.css';
 import 'semantic-ui-css/semantic.min.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { setMobileDetect, mobileParser } from 'react-responsive-redux'
 
 class MyApp extends App {
     render() {
-        const {Component, pageProps } = this.props;
+        const {Component, pageProps, req } = this.props;
+        const { dispatch } = store;
+
+        // do our mobile detection
+        const mobileDetect = mobileParser(req);
+        // set mobile detection for our responsive store
+        dispatch(setMobileDetect(mobileDetect));
+
         return(
             <Provider store={store}>
                 <Component { ...pageProps } />
