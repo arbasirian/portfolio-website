@@ -23,7 +23,7 @@ const ArticleItem = ({activeSlide, articles, selectArticle}) => {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    min-height: 90vh;
+                    min-height: 80vh;
                 }
                 .article-item .info {
                     display: flex;
