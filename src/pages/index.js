@@ -9,7 +9,7 @@ const Index = () => (
             <div className="desc-container slideInRight">
                 <div className="full-name slideInRight">Armin Basirian</div>
                 <div className="job-title">Front-End Developer</div>
-                <div className="age">Since 1992</div>
+                <div className="age">Since 2015</div>
             </div>
         </div>
         <style jsx>{`

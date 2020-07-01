@@ -1,16 +1,20 @@
 import { connect } from "react-redux";
 import { createStructuredSelector } from 'reselect';
 import { selectPortfolioSlide, selectPortfolioList } from "../../redux/portfolio/portfolio.selectors";
+import Link from "next/link";
+import { selectPortfolio } from "../../redux/portfolio/portfolio.actions";
 
-const PortfolioItem = ({activeSlide, list}) => {
-    const { title,  description, image_url} = list[activeSlide];
+const PortfolioItem = ({activeSlide, list, selectPortfolio}) => {
+    const { id, title,  description, image_url} = list[activeSlide];
     return (
         <div className="portfolio-item">
             <div className="info">
                 <div className="title">{title}</div>
                 <div className="devider" />
                 <div className="description">{description}</div>
-                <a className="more">See More</a>
+                <Link href={{ pathname: '/portfolio-view', query: { portfolioId: id } }}>
+                    <a onClick={ () => selectPortfolio(id) } className="more">See More</a>
+                </Link>
             </div>
             <div className="image">
                 <img src={image_url}/>
@@ -79,8 +83,11 @@ const PortfolioItem = ({activeSlide, list}) => {
         </div>
     )
 }
+const mapDispatchToProps = dispatch => ({
+    selectPortfolio: item => dispatch(selectPortfolio(item)),
+});
 const mapStateToProps = createStructuredSelector({
     activeSlide: selectPortfolioSlide,
     list: selectPortfolioList
 });
-export default connect(mapStateToProps)(PortfolioItem);
+export default connect(mapStateToProps, mapDispatchToProps)(PortfolioItem);

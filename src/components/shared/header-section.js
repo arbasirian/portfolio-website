@@ -20,7 +20,6 @@ const HeaderSection = () => (
                 text-decoration: none;
                 color: #c82127;
                 line-height: normal;
-
             }
         `}</style>
     </div>

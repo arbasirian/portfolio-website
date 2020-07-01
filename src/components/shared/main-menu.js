@@ -1,11 +1,26 @@
 import Link from 'next/link';
 import { Dropdown } from 'semantic-ui-react'
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectPortfolioList } from '../../redux/portfolio/portfolio.selectors';
+import { selectPortfolio } from '../../redux/portfolio/portfolio.actions';
 
-const MainMenu = () => (
+
+const MainMenu = ({ portfolioList, selectPortfolio }) => (
     <div className="main-menu">
         <Dropdown text='Portfolio'>
             <Dropdown.Menu>
                 <Dropdown.Item><Link href="/portfolio"><a>All Items</a></Link></Dropdown.Item >
+                {
+                    portfolioList.map((item) => (
+                        <Dropdown.Item key={ item.id }>
+                            <Link href={{ pathname: '/portfolio-view', query: { portfolioId: item.id } }}>
+                                <a onClick={ () => selectPortfolio(item.id) }>{ item.title } </a>
+                            </Link>
+                        </Dropdown.Item>
+                    ))
+                }
+                
             </Dropdown.Menu>
         </Dropdown>
         <Link href="/articles"><a>Articles</a></Link>
@@ -31,5 +46,10 @@ const MainMenu = () => (
         `}</style>
     </div>
 );
-
-export default MainMenu;
+const mapDispatchToProps = dispatch => ({
+    selectPortfolio: item => dispatch(selectPortfolio(item)),
+});
+const mapStateToProps = createStructuredSelector({
+    portfolioList: selectPortfolioList
+});
+export default connect(mapStateToProps, mapDispatchToProps)(MainMenu);
