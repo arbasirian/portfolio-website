@@ -34,7 +34,7 @@ const Index = () => (
                 flex-direction: column;
             }
             .desc-container .full-name {
-                font-size: 48px;
+                font-size: 45px;
                 font-weight: 900;
                 display: inline;
                 padding: 10px 22px;
