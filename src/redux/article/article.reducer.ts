@@ -2,9 +2,10 @@
 import ArticleActionTypes from './article.types';
 import { selectCurrentItem } from './article.utils';
 import ARTICLE_DATA from './article.data';
+import { ArticleState } from '../../shared/schema/articles';
 
-const INITIAL_STATE = {
-    currentArticle: {},
+const INITIAL_STATE: ArticleState = {
+    currentArticle: null,
     articleSlideItem: 0,
     articles: ARTICLE_DATA,
 }
